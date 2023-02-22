@@ -1,5 +1,5 @@
 import React from 'react';
-import Feedback from './Feedback/Feedback';
+import Feedback from './Feedback';
 
 class App extends React.Component {
   state = {
@@ -12,6 +12,10 @@ class App extends React.Component {
       <>
         <Feedback state={this.state} />
       </>
+      // <Layout>
+      //   <Feedback state={this.state} />
+      //   <GlobalStyle />
+      // </Layout>
     );
   }
 }

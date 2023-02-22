@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { OptinsItem } from './Statistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePer }) =>
   total !== 0 && (
-    <section>
-      <p>Good:{good}</p>
-      <p>Neutral:{neutral}</p>
-      <p>Bad:{bad}</p>
-      <p>Total: {total}</p>
-      <p>
+    <>
+      <OptinsItem>Good:{good}</OptinsItem>
+      <OptinsItem>Neutral:{neutral}</OptinsItem>
+      <OptinsItem>Bad:{bad}</OptinsItem>
+      <OptinsItem>Total: {total}</OptinsItem>
+      <OptinsItem>
         Positive feedback:
         {good > 0 ? positivePer + '%' : 0 + '%'}
-      </p>
-    </section>
+      </OptinsItem>
+    </>
   );
 
 export default Statistics;

@@ -1,8 +1,10 @@
 import React from 'react';
-import FeedbackOptions from './FeedbackOptions ';
-import Statistics from './Statistics';
-import Section from './Section';
-import Notification from './Notification';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions ';
+import Statistics from '../Statistics/Statistics';
+import Section from '../Section/Section';
+import Notification from '../Notification/Notification';
+import { GlobalStyle } from 'components/GlobalStyle';
+import { Layout } from 'components/Layuot/Layuot.styled';
 
 class Feedback extends React.Component {
   static defaultProps = {
@@ -37,7 +39,7 @@ class Feedback extends React.Component {
 
     const countPositivePer = Math.round((good / countTotalFeedback) * 100);
     return (
-      <>
+      <Layout>
         <Section title="Please leave feedback">
           <FeedbackOptions
             onBtnGood={this.handleBtnGood}
@@ -45,8 +47,7 @@ class Feedback extends React.Component {
             onBtnBad={this.handleBtnBad}
           />
         </Section>
-
-        <Section title="Statistics">
+        <Section title="Statistics:">
           <Statistics
             good={good}
             neutral={neutral}
@@ -59,7 +60,8 @@ class Feedback extends React.Component {
           message="There is no feedback"
           total={countTotalFeedback}
         />
-      </>
+        <GlobalStyle />
+      </Layout>
     );
   }
 }

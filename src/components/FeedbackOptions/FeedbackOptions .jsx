@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Btn } from './Options.styled';
 
 const FeedbackOptions = ({ onBtnGood, onBtnNeutral, onBtnBad }) => (
-  <section>
-    <button type="button" onClick={onBtnGood}>
+  <>
+    <Btn type="button" onClick={onBtnGood}>
       Good
-    </button>
-    <button type="button" onClick={onBtnNeutral}>
+    </Btn>
+    <Btn type="button" onClick={onBtnNeutral}>
       Neutral
-    </button>
-    <button type="button" onClick={onBtnBad}>
+    </Btn>
+    <Btn type="button" onClick={onBtnBad}>
       Bad
-    </button>
-  </section>
+    </Btn>
+  </>
 );
 
 export default FeedbackOptions;

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Title, SectionWrap } from './Section.styled';
 
 const Section = ({ title, children }) => (
-  <section>
-    <h2>{title}</h2>
+  <SectionWrap>
+    <Title>{title}</Title>
     {children}
-  </section>
+  </SectionWrap>
 );
 export default Section;
 
