@@ -12,6 +12,7 @@ export const Btn = styled.button`
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
+  cursor: pointer;
   :hover {
     background: rgba(165, 24, 97, 0.8);
   }
